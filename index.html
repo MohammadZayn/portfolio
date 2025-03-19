@@ -5,180 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Shaik - Test Automation Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
+        :root {
+            --primary-color: #6b83d6;
+            --secondary-color: #ff6f61;
+            --text-light: #fff;
+            --text-dark: #333;
+            --bg-dark: #121212;
+            --bg-light: #f4f4f4;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: all 0.3s ease;
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
         }
         header {
-            background: linear-gradient(135deg, #0f4c81, #de4463, #6b83d6);
-            color: #fff;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
             padding: 100px 0;
             text-align: center;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
         header h1 {
             font-size: 50px;
             letter-spacing: 3px;
-            margin-bottom: 10px;
         }
         header p {
             font-size: 24px;
-            margin-bottom: 30px;
+            margin-top: 10px;
         }
-        header nav a {
-            color: #fff;
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: var(--text-light);
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
-            font-weight: 500;
+            font-weight: bold;
+            padding-bottom: 4px;
             border-bottom: 2px solid transparent;
-            transition: 0.3s;
         }
-        header nav a:hover {
-            border-bottom: 2px solid #fff;
+        nav a:hover {
+            border-bottom: 2px solid var(--text-light);
         }
         section {
             padding: 80px 20px;
             text-align: center;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
-        h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            position: relative;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        h2:after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: #ff6f61;
-            position: absolute;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
-        .dark {
-            background-color: #333;
-            color: #fff;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-        }
-        /* Skills Section */
-        .skills-list {
+        .skills-list, .projects-container, .contact-info {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
         }
-        .skills-list li {
+        .skills-list li, .project-card, .contact-item {
             list-style: none;
-            background-color: #6b83d6;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 20px;
-            font-size: 16px;
-            transition: 0.3s;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: transform 0.3s;
         }
-        .skills-list li:hover {
-            background-color: #ff6f61;
-            cursor: pointer;
-        }
-        /* Projects Section */
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .skills-list li:hover, .project-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary-color);
         }
         .project-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
             width: 300px;
-            transition: 0.3s;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .project-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .project-card p {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #555;
+            text-align: left;
         }
         .project-card a {
+            color: var(--text-light);
             text-decoration: none;
-            color: #6b83d6;
             font-weight: bold;
-            transition: color 0.3s;
         }
-        .project-card a:hover {
-            color: #ff6f61;
-        }
-        /* Contact Section */
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        .contact-item {
-            text-align: left;
-            color: #555;
-        }
-        .contact-type {
-            font-weight: bold;
-            color: #6b83d6;
-        }
-        .contact-detail {
-            color: #333;
-        }
-        .contact-detail a {
-            color: inherit;
-            text-decoration: none;
+        .theme-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
         }
         footer {
-            background-color: #6b83d6;
+            background-color: var(--primary-color);
+            color: var(--text-light);
             padding: 20px;
             text-align: center;
-            color: #fff;
-        }
-        footer p {
-            margin: 0;
         }
     </style>
 </head>
 <body>
-
+    <div class="theme-switch" onclick="toggleTheme()">🌙</div>
     <header>
         <h1>Mohammad Shaik</h1>
         <p>Test Automation Engineer</p>
         <nav>
             <a href="#about">About Me</a>
-            <a href="#resume">Resume</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -186,30 +136,10 @@
     </header>
 
     <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>
-            With 3 years of experience in Python automation testing, I specialize in leveraging Selenium for robust test automation.
-            My expertise extends to basic REST API testing and managing version control with GitHub. Skilled in configuring and running Jenkins jobs to streamline continuous integration processes.
-            Passionate about delivering quality software, I am committed to adapting to new challenges in the field of automation testing.
-        </p>
-    </section>
-
-    <section id="resume" class="container dark">
-        <h2>Resume</h2>
-        <p><a href="https://drive.google.com/file/d/1W4il7rk1hFxRn2NT-dVhae__KDJqYHlT/view?usp=drive_link" target="_blank">Download My Resume</a></p>
-        <h3>Experience</h3>
-        <ul>
-            <li>QA Automation Engineer - Tata Consultancy Services (2022 - Present)</li>
-        </ul>
-        <h3>Education</h3>
-        <ul>
-            <li>B.Tech in Mechanical - Narayana Engineering College (2017 - 2021)</li>
-        </ul>
-        <h3>Certifications</h3>
-        <ul>
-            <li>Certified Selenium Tester - Selenium HQ (2023)</li>
-            <li>ISTQB Certified Tester - ISTQB (2023)</li>
-        </ul>
+        <div class="glass-card">
+            <h2>About Me</h2>
+            <p>Experienced in Python, Selenium, and CI/CD pipelines, ensuring efficient automation for software testing.</p>
+        </div>
     </section>
 
     <section id="projects" class="container">
@@ -217,51 +147,33 @@
         <div class="projects-container">
             <div class="project-card">
                 <h3>API Testing Automation</h3>
-                <p>Created a robust API testing suite using REST Assured and integrated it seamlessly into a CI/CD pipeline with Jenkins.</p>
-                <p><strong>Technologies:</strong> Python, REST Assured, Jenkins</p>
-                <p><a href="https://github.com/MohammadZayn/Hybrid_Framework_API" target="_blank">View Project</a></p>
+                <p>Created a REST Assured test suite integrated with Jenkins CI/CD.</p>
+                <p><a href="#">View Project</a></p>
             </div>
             <div class="project-card">
-                <h3>Automated Testing Framework</h3>
-                <p>Developed a dynamic and scalable automated testing framework for web applications using Selenium WebDriver, PyTest, and Allure.</p>
-                <p><strong>Technologies:</strong> Python, Selenium, PyTest, Allure</p>
-                <p><a href="https://github.com/MohammadZayn/Heruko_Project.git" target="_blank">View Project</a></p>
+                <h3>Web Automation Framework</h3>
+                <p>Developed a Selenium-based framework for automated regression testing.</p>
+                <p><a href="#">View Project</a></p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="container dark">
+    <section id="skills" class="container">
         <h2>Skills</h2>
         <ul class="skills-list">
             <li>Selenium</li>
-            <li>REST Assured</li>
             <li>Python</li>
             <li>Jenkins</li>
-            <li>Git</li>
-            <li>JIRA</li>
-            <li>Allure</li>
+            <li>REST API Testing</li>
         </ul>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact Me</h2>
         <div class="contact-info">
-            <div class="contact-item">
-                <span class="contact-type">Phone:</span>
-                <span class="contact-detail"><a href="tel:+91-9441595156">+91-8019455881</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-type">Email:</span>
-                <span class="contact-detail"><a href="mailto:mohammad.shaik@tester.com">mohammadshaik776@gmail.com</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-type">LinkedIn:</span>
-                <span class="contact-detail"><a href="https://www.linkedin.com/in/mohammadzayn/" target="_blank">linkedin.com/in/mohammadzayn</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-type">Github:</span>
-                <span class="contact-detail"><a href="https://github.com/MohammadZayn" target="_blank">github.com/MohammadZayn</a></span>
-            </div>
+            <div class="contact-item">📧 Email: <a href="mailto:mohammadshaik776@gmail.com">mohammadshaik776@gmail.com</a></div>
+            <div class="contact-item">🔗 LinkedIn: <a href="#">linkedin.com/in/mohammadzayn</a></div>
+            <div class="contact-item">🐙 GitHub: <a href="#">github.com/MohammadZayn</a></div>
         </div>
     </section>
 
@@ -269,5 +181,10 @@
         <p>&copy; 2024 Mohammad Shaik - All Rights Reserved</p>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
