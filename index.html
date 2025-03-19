@@ -3,188 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Shaik - Test Automation Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Automation Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --primary-color: #6b83d6;
-            --secondary-color: #ff6f61;
-            --text-light: #fff;
-            --text-dark: #333;
-            --bg-dark: #121212;
-            --bg-light: #f4f4f4;
-        }
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-        }
-        .dark-mode {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
         }
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: var(--text-light);
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-        header h1 {
-            font-size: 50px;
-            letter-spacing: 3px;
-        }
-        header p {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-        }
-        nav a:hover {
-            border-bottom: 2px solid var(--text-light);
-        }
-        section {
-            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
             text-align: center;
         }
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            text-align: center;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .skills-list, .projects-container, .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .skills-list li, .project-card, .contact-item {
+        nav ul {
             list-style: none;
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            padding: 15px 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: transform 0.3s;
+            padding: 0;
         }
-        .skills-list li:hover, .project-card:hover {
-            transform: translateY(-5px);
-            background-color: var(--secondary-color);
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
         }
-        .project-card {
-            width: 300px;
-            text-align: left;
-        }
-        .project-card a {
-            color: var(--text-light);
+        nav ul li a {
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
-        .theme-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-color);
-            color: var(--text-light);
-            padding: 10px 15px;
-            border-radius: 20px;
-            cursor: pointer;
+        .section {
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-light);
+        h2 {
+            color: #ffd700;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .project {
+            background: rgba(0, 0, 0, 0.3);
             padding: 20px;
-            text-align: center;
+            border-radius: 10px;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="theme-switch" onclick="toggleTheme()">🌙</div>
     <header>
-        <h1>Mohammad Shaik</h1>
-        <p>Test Automation Engineer</p>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>Zain - Automation Engineer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about" class="container">
-        <div class="glass-card">
+    <section id="about" class="section">
+        <div class="container">
             <h2>About Me</h2>
-            <p>Experienced in Python, Selenium, and CI/CD pipelines, ensuring efficient automation for software testing.</p>
+            <p>I am an experienced Automation Engineer specializing in test automation frameworks, CI/CD, and software quality assurance.</p>
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <h3>API Testing Automation</h3>
-                <p>Created a REST Assured test suite integrated with Jenkins CI/CD.</p>
-                <p><a href="#">View Project</a></p>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Selenium, Cypress, Playwright</li>
+                <li>Python, JavaScript, Java</li>
+                <li>CI/CD (Jenkins, GitHub Actions)</li>
+                <li>API Testing (Postman, RestAssured)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Test Automation Framework</h3>
+                <p>Developed a scalable Selenium & PyTest framework integrated with CI/CD.</p>
             </div>
-            <div class="project-card">
-                <h3>Web Automation Framework</h3>
-                <p>Developed a Selenium-based framework for automated regression testing.</p>
-                <p><a href="#">View Project</a></p>
-            </div>
         </div>
     </section>
 
-    <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Selenium</li>
-            <li>Python</li>
-            <li>Jenkins</li>
-            <li>REST API Testing</li>
-        </ul>
-    </section>
-
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <div class="contact-item">📧 Email: <a href="mailto:mohammadshaik776@gmail.com">mohammadshaik776@gmail.com</a></div>
-            <div class="contact-item">🔗 LinkedIn: <a href="#">linkedin.com/in/mohammadzayn</a></div>
-            <div class="contact-item">🐙 GitHub: <a href="#">github.com/MohammadZayn</a></div>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <p>Worked at leading tech firms focusing on automation strategies and improving test coverage.</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Mohammad Shaik - All Rights Reserved</p>
-    </footer>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: zain@example.com</p>
+            <p>LinkedIn: linkedin.com/in/zain</p>
+        </div>
+    </section>
 </body>
 </html>
